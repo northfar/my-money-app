@@ -3,3 +3,11 @@
     bottom: 0px;
     width:100%;
 }
+
+.btn-actions{
+    margin-left: 10px;
+}
+
+.action{
+    width: 120px;
+}

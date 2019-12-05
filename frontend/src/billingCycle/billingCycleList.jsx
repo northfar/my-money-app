@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 
+import IconButton from '../common/layout/iconButton'
+
 import {getList} from './billingCycleActions'
 
 class BillingCycleList extends Component{
@@ -17,7 +19,10 @@ class BillingCycleList extends Component{
                 <td>{bc.name}</td>
                 <td>{bc.month}</td>
                 <td>{bc.year}</td>
-                <td>&ensp;</td>
+                <td>
+                  <IconButton style='warning' icon='pencil' onClick={() => alert('Action de edição')}/>
+                  <IconButton style='danger' icon='ban' onClick={() => alert('Action de exclusão')}/>
+                </td>
             </tr>
         ))
     }
