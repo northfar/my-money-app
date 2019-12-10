@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 import IconButton from '../common/layout/iconButton'
 
-import {getList, showUpdate} from './billingCycleActions'
+import {getList, showUpdate, showDelete} from './billingCycleActions'
 
 class BillingCycleList extends Component{
 
@@ -21,7 +21,7 @@ class BillingCycleList extends Component{
                 <td>{bc.year}</td>
                 <td>
                   <IconButton style='warning' type='button' icon='pencil' onClick={() => this.props.showUpdate(bc)}/>
-                  <IconButton style='danger' type='button' icon='ban' onClick={() => alert('Action de exclusão')}/>
+                  <IconButton style='danger' type='button' icon='ban' onClick={() => this.props.showDelete(bc)}/>
                 </td>
             </tr>
         ))
@@ -49,5 +49,5 @@ class BillingCycleList extends Component{
 }
 
 const mapStateToProps = state => ({list: state.billingCycle.list})
-const mapDispatchToProps = dispatch => bindActionCreators({getList, showUpdate}, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({getList, showUpdate, showDelete}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(BillingCycleList)

@@ -21,10 +21,22 @@ export const update = values =>{
     return submit(values,'put')
 }
 
+export const remove = values =>{
+    return submit(values,'delete')
+}
+
 export const showUpdate = billingCycle =>{
     return [
         showTabs('tabUpdate'),
         selectTab('tabUpdate'),
+        initialize('billingCycleForm', billingCycle)
+    ]
+}
+
+export const showDelete = billingCycle =>{
+    return [
+        showTabs('tabDelete'),
+        selectTab('tabDelete'),
         initialize('billingCycleForm', billingCycle)
     ]
 }

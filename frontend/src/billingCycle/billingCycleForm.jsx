@@ -8,22 +8,26 @@ import {init} from './billingCycleActions'
 import IconButton from '../common/layout/iconButton'
 import LabelAndInput from '../common/form/labelAndInput'
 
+import CreditList from './creditList'
+
 class BillingCycleForm extends Component{
 
     render(){
-        const {handleSubmit} = this.props
+        const {handleSubmit, readOnly} = this.props
+        console.log(this.props)
         return(
             <form role="form" onSubmit={handleSubmit}>
                 <div className="box-body">
-                  <Field name="name" component={LabelAndInput} 
+                  <Field name="name" component={LabelAndInput} readOnly={readOnly}
                          cols='12 4' label='Nome' type='text' placeholder='Informe o nome' />
-                  <Field name="month" component={LabelAndInput} 
+                  <Field name="month" component={LabelAndInput} readOnly={readOnly}
                          cols='12 4' label='Mês' type='number' placeholder='Informe o mês'/>
-                  <Field name="year" component={LabelAndInput} 
-                         cols='12 4' label='Ano' type='number' placeholder='Informe o ano'/> 
+                  <Field name="year" component={LabelAndInput} readOnly={readOnly}
+                         cols='12 4' label='Ano' type='number' placeholder='Informe o ano'/>
+                  <CreditList cols='12 6'/>
                 </div>
                 <div className="box-footer">
-                    <IconButton style='primary' type='submit' icon='plus' />
+                    <IconButton style={this.props.style} type='submit' icon={this.props.icon} />
                     <IconButton style='default' type='button' icon='undo' onClick={this.props.init}/>
                 </div>
             </form>
