@@ -3,7 +3,7 @@ import {toastr} from 'react-redux-toastr'
 import {reset as resetForm, initialize} from 'redux-form'
 import {showTabs, selectTab} from '../common/tab/tabActions'
 
-const INITIAL_VALUES = {}
+const INITIAL_VALUES = {credits: [{}], debts:[{}]}
 
 export const getList = () => {
     const request = api.get('/billingCycles')
