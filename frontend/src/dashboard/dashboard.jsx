@@ -8,7 +8,7 @@ import ValueBox from '../common/widget/valueBox'
 import Row from '../common/layout/row'
 
 //import { getSummary } from './dashboardActions'
-import api from '../services/api'
+import {api} from '../services/api'
 
 
 class Dashboard extends Component{

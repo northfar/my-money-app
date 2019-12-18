@@ -9,12 +9,12 @@ export default ({credit, debt}) => (
         <fieldset>
             <legend>Resumo</legend>
             <Row>
-            <ValueBox cols='12 4' color='green' text='Total de Créditos'
-            value={`R$ ${credit}`} icon='bank'/>
+              <ValueBox cols='12 4' color='green' text='Total de Créditos'
+              value={`R$ ${credit}`} icon='bank'/>
               <ValueBox cols='12 4' color='red' text='Total de Débitos'
-            value={`R$ ${debt}`} icon='credit-card'/>
+              value={`R$ ${debt}`} icon='credit-card'/>
               <ValueBox cols='12 4' color='blue' text='Valor Consolidado'
-            value={`R$ ${credit - debt}`} icon='money'/>
+              value={`R$ ${credit - debt}`} icon='money'/>
             </Row>
         </fieldset>
     </Grid>

@@ -4,4 +4,11 @@ const api = axios.create({
     baseURL: 'http://localhost:3003/api'
 })
 
-export default api
+const oapi = axios.create({
+     baseURL: 'http://localhost:3003/oapi'
+ })
+ 
+export {
+    api,
+    oapi
+}

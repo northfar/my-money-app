@@ -1,4 +1,4 @@
-import api from '../services/api'
+import {api} from '../services/api'
 import {toastr} from 'react-redux-toastr'
 import {reset as resetForm, initialize} from 'redux-form'
 import {showTabs, selectTab} from '../common/tab/tabActions'
